@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2a8dd6ba6d9dd659c3977e0442f52d41 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2a8dd6ba6d9dd659c3977e0442f52d41" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2a8dd6ba6d9dd659c3977e0442f52d41 = L.map(
+                "map_2a8dd6ba6d9dd659c3977e0442f52d41",
+                {
+                    center: [4.6097, -74.0817],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7d0bf318aaa049110a3a7302d6b254a7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7d0bf318aaa049110a3a7302d6b254a7.addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var marker_dcc06dfb8e4f0dc73e4830b3f8d78891 = L.marker(
+                [4.61931764000002, -74.097908012],
+                {
+}
+            ).addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var icon_b1a881a2eda84c64ba3e3c6ab86a5603 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_642e4b69ccf345c3558a3bf49b43879d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5be723348bad801bbd43ffa1f6fd991 = $(`<div id="html_b5be723348bad801bbd43ffa1f6fd991" style="width: 100.0%; height: 100.0%;">Cluster 3633: KR 51 D D - CL 41 B  S 58</div>`)[0];
+                popup_642e4b69ccf345c3558a3bf49b43879d.setContent(html_b5be723348bad801bbd43ffa1f6fd991);
+            
+        
+
+        marker_dcc06dfb8e4f0dc73e4830b3f8d78891.bindPopup(popup_642e4b69ccf345c3558a3bf49b43879d)
+        ;
+
+        
+    
+    
+                marker_dcc06dfb8e4f0dc73e4830b3f8d78891.setIcon(icon_b1a881a2eda84c64ba3e3c6ab86a5603);
+            
+    
+            var marker_52f01b18e9df554c2cf6dc5f5e04df74 = L.marker(
+                [4.63236137299998, -74.154053059],
+                {
+}
+            ).addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var icon_b659aa1c497ca039e47be2eaa625addd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30592aecd90ff5a50eed3e6d8e2fc991 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_853bf18dfb9a339f28819f389a18114d = $(`<div id="html_853bf18dfb9a339f28819f389a18114d" style="width: 100.0%; height: 100.0%;">Cluster 1131: AK 80-CL 2 51</div>`)[0];
+                popup_30592aecd90ff5a50eed3e6d8e2fc991.setContent(html_853bf18dfb9a339f28819f389a18114d);
+            
+        
+
+        marker_52f01b18e9df554c2cf6dc5f5e04df74.bindPopup(popup_30592aecd90ff5a50eed3e6d8e2fc991)
+        ;
+
+        
+    
+    
+                marker_52f01b18e9df554c2cf6dc5f5e04df74.setIcon(icon_b659aa1c497ca039e47be2eaa625addd);
+            
+    
+            var marker_77c7beba16d9ad20d65ecc662c48ff40 = L.marker(
+                [4.62856971999997, -74.170725644],
+                {
+}
+            ).addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var icon_a2d2cfd12ddbb0a3dab3bcf48e5e810f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20628cb7670559d709c9857a8c5056e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ded50d5f8a8a5bef998b2b195216644c = $(`<div id="html_ded50d5f8a8a5bef998b2b195216644c" style="width: 100.0%; height: 100.0%;">Cluster 249: AC 43-KR 86 S 02</div>`)[0];
+                popup_20628cb7670559d709c9857a8c5056e8.setContent(html_ded50d5f8a8a5bef998b2b195216644c);
+            
+        
+
+        marker_77c7beba16d9ad20d65ecc662c48ff40.bindPopup(popup_20628cb7670559d709c9857a8c5056e8)
+        ;
+
+        
+    
+    
+                marker_77c7beba16d9ad20d65ecc662c48ff40.setIcon(icon_a2d2cfd12ddbb0a3dab3bcf48e5e810f);
+            
+    
+            var marker_40e20543c3588959489a7a3c84770080 = L.marker(
+                [4.65932972799999, -74.135899837],
+                {
+}
+            ).addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var icon_4951dab4ae71bb0db8bec891f9c79e52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_973a4cf0da5e848b02f8ddd6a9efe0f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd9d97af56f8c9877ffadd63704dce29 = $(`<div id="html_dd9d97af56f8c9877ffadd63704dce29" style="width: 100.0%; height: 100.0%;">Cluster 215: AV AVENIDA CIUDAD DE CALI-CL 13 02</div>`)[0];
+                popup_973a4cf0da5e848b02f8ddd6a9efe0f5.setContent(html_dd9d97af56f8c9877ffadd63704dce29);
+            
+        
+
+        marker_40e20543c3588959489a7a3c84770080.bindPopup(popup_973a4cf0da5e848b02f8ddd6a9efe0f5)
+        ;
+
+        
+    
+    
+                marker_40e20543c3588959489a7a3c84770080.setIcon(icon_4951dab4ae71bb0db8bec891f9c79e52);
+            
+    
+            var marker_c803a25ab11791ebafbc5c7853f27b04 = L.marker(
+                [4.61871337399998, -74.139347525],
+                {
+}
+            ).addTo(map_2a8dd6ba6d9dd659c3977e0442f52d41);
+        
+    
+            var icon_8352fc49549e2daa244fd871f8d1cde5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b3f62caacc42bb198f6b49056571974 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3aacef4515c6f2740f1123b2425ab242 = $(`<div id="html_3aacef4515c6f2740f1123b2425ab242" style="width: 100.0%; height: 100.0%;">Cluster 53: AV AVENIDA BOYACA-AV AVENIDA PRIMERO DE MAYO 02</div>`)[0];
+                popup_5b3f62caacc42bb198f6b49056571974.setContent(html_3aacef4515c6f2740f1123b2425ab242);
+            
+        
+
+        marker_c803a25ab11791ebafbc5c7853f27b04.bindPopup(popup_5b3f62caacc42bb198f6b49056571974)
+        ;
+
+        
+    
+    
+                marker_c803a25ab11791ebafbc5c7853f27b04.setIcon(icon_8352fc49549e2daa244fd871f8d1cde5);
+            
+</script>
+</html>
