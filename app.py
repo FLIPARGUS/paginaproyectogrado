@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 import socket
 import subprocess
 import threading
@@ -16,23 +17,69 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DIST_DIR = PROJECT_DIR / "dist"
 
 
+def _resolve_npm_command() -> list[str] | None:
+    """Locate npm even when PATH is incomplete in Streamlit/IDE terminals."""
+    env_npm = os.environ.get("NPM_CMD")
+    if env_npm:
+        return [env_npm]
+
+    if os.name != "nt":
+        npm = shutil.which("npm")
+        return [npm] if npm else None
+
+    for candidate in ("npm.cmd", "npm.exe", "npm"):
+        npm = shutil.which(candidate)
+        if npm:
+            return [npm]
+
+    windows_candidates = [
+        Path(os.environ.get("ProgramFiles", "")) / "nodejs" / "npm.cmd",
+        Path(os.environ.get("ProgramFiles(x86)", "")) / "nodejs" / "npm.cmd",
+        Path(os.environ.get("LocalAppData", "")) / "Programs" / "nodejs" / "npm.cmd",
+    ]
+    for npm_path in windows_candidates:
+        if npm_path.exists():
+            return [str(npm_path)]
+
+    node = shutil.which("node.exe") or shutil.which("node")
+    if node:
+        npm_cli = Path(node).resolve().parent / "node_modules" / "npm" / "bin" / "npm-cli.js"
+        if npm_cli.exists():
+            return [str(Path(node).resolve()), str(npm_cli)]
+
+    return None
+
+
 def _build_react_app_if_needed() -> None:
     index_file = DIST_DIR / "index.html"
     if index_file.exists():
         return
 
     st.info("No se encontro 'dist/'. Ejecutando 'npm run build'...")
-    npm_cmd = "npm.cmd" if os.name == "nt" else "npm"
+    npm_cmd = _resolve_npm_command()
+    if not npm_cmd:
+        st.error(
+            "No se encontro npm para este proceso. "
+            "Instala Node.js o define la variable de entorno NPM_CMD con la ruta completa a npm.cmd."
+        )
+        st.code(
+            "Ejemplo Windows (PowerShell):\n"
+            "$env:NPM_CMD='C:\\Program Files\\nodejs\\npm.cmd'\n"
+            "streamlit run app.py",
+            language="powershell",
+        )
+        st.stop()
+
     try:
         result = subprocess.run(
-            [npm_cmd, "run", "build"],
+            [*npm_cmd, "run", "build"],
             cwd=PROJECT_DIR,
             capture_output=True,
             text=True,
             check=False,
         )
     except FileNotFoundError:
-        st.error("No se encontro npm. Instala Node.js para poder ejecutar el build de Vite.")
+        st.error("No se encontro npm al ejecutar el build. Instala Node.js o configura NPM_CMD.")
         st.stop()
 
     if result.returncode != 0:
