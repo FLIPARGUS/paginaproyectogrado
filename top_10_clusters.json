@@ -1,0 +1,82 @@
+[
+  {
+    "Cluster": -2,
+    "Total_Accidentes": 15065,
+    "Con_Moto": 3421,
+    "Con_Peaton": 1418,
+    "Con_Bicicleta": 697,
+    "Con_Velocidad": 169
+  },
+  {
+    "Cluster": 3633,
+    "Total_Accidentes": 641,
+    "Con_Moto": 230,
+    "Con_Peaton": 64,
+    "Con_Bicicleta": 45,
+    "Con_Velocidad": 2
+  },
+  {
+    "Cluster": 215,
+    "Total_Accidentes": 281,
+    "Con_Moto": 64,
+    "Con_Peaton": 11,
+    "Con_Bicicleta": 26,
+    "Con_Velocidad": 5
+  },
+  {
+    "Cluster": 106,
+    "Total_Accidentes": 257,
+    "Con_Moto": 42,
+    "Con_Peaton": 13,
+    "Con_Bicicleta": 13,
+    "Con_Velocidad": 1
+  },
+  {
+    "Cluster": 531,
+    "Total_Accidentes": 230,
+    "Con_Moto": 59,
+    "Con_Peaton": 18,
+    "Con_Bicicleta": 18,
+    "Con_Velocidad": 3
+  },
+  {
+    "Cluster": 1131,
+    "Total_Accidentes": 222,
+    "Con_Moto": 14,
+    "Con_Peaton": 39,
+    "Con_Bicicleta": 4,
+    "Con_Velocidad": 3
+  },
+  {
+    "Cluster": 53,
+    "Total_Accidentes": 210,
+    "Con_Moto": 67,
+    "Con_Peaton": 27,
+    "Con_Bicicleta": 24,
+    "Con_Velocidad": 5
+  },
+  {
+    "Cluster": 1077,
+    "Total_Accidentes": 202,
+    "Con_Moto": 30,
+    "Con_Peaton": 5,
+    "Con_Bicicleta": 13,
+    "Con_Velocidad": 1
+  },
+  {
+    "Cluster": 1121,
+    "Total_Accidentes": 201,
+    "Con_Moto": 31,
+    "Con_Peaton": 3,
+    "Con_Bicicleta": 10,
+    "Con_Velocidad": 0
+  },
+  {
+    "Cluster": 249,
+    "Total_Accidentes": 195,
+    "Con_Moto": 59,
+    "Con_Peaton": 21,
+    "Con_Bicicleta": 33,
+    "Con_Velocidad": 0
+  }
+]
